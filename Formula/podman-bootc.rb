@@ -6,9 +6,9 @@ class PodmanBootc < Formula
     revision: "5754e1774e357d4ff872b66e3462afed265f41a8"
   license "Apache-2.0"
 
+  depends_on "go" => :build
   # Works on linux but for now we just provide a formula for MacOS
   depends_on arch: :arm64
-  depends_on "go" => :build
   depends_on "libvirt"
   depends_on "xorriso"
 
