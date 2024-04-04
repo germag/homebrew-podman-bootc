@@ -5,9 +5,10 @@ class PodmanBootc < Formula
   license "Apache-2.0"
 
   depends_on "go" => :build
-  depends_on "glibc"
   depends_on "libvirt"
   depends_on "xorriso"
+  # Works on linux but for now we just provide a formula for MacOS
+  depends_on arch: :arm64
 
   def install
     system "make"
