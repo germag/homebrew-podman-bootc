@@ -1,9 +1,10 @@
 class PodmanBootc < Formula
   desc "Streamlining podman + bootc interactions"
-  homepage "https://gitlab.com/bootc-org/podman-bootc-cli"
-  url "https://gitlab.com/bootc-org/podman-bootc-cli.git",
+  homepage "https://github.com/containers/podman-bootc"
+  url "https://github.com/containers/podman-bootc.git",
     tag:      "v0.1.1",
     revision: "5754e1774e357d4ff872b66e3462afed265f41a8"
+  head "https://github.com/containers/podman-bootc.git", branch: "main"
   license "Apache-2.0"
 
   depends_on "go" => :build
