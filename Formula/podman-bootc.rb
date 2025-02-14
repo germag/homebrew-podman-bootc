@@ -2,10 +2,13 @@ class PodmanBootc < Formula
   desc "Streamlining podman + bootc interactions"
   homepage "https://github.com/containers/podman-bootc"
   url "https://github.com/containers/podman-bootc.git",
-    tag:      "v0.1.1",
-    revision: "5754e1774e357d4ff872b66e3462afed265f41a8"
-  head "https://github.com/containers/podman-bootc.git", branch: "main"
+    tag:      "v0.1.2"
   license "Apache-2.0"
+
+  head do
+    url  "https://github.com/containers/podman-bootc.git", branch: "main"
+    depends_on "go-md2man" => :build
+  end
 
   depends_on "go" => :build
   # Works on linux but for now we just provide a formula for MacOS
